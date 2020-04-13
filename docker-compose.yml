@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mysql:
+    image: 'mysql'
+    environment:
+      MYSQL_DATABASE: 'example'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - './seed-data:/docker-entrypoint-initdb.d'
